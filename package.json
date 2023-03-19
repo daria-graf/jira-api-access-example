@@ -1,0 +1,26 @@
+{
+  "name": "jira-api-access-example",
+  "version": "1.0.0",
+  "description": "An example application how to use Jira API",
+  "main": "main.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daria-graf/jira-api-access-example.git"
+  },
+  "keywords": [
+    "jira-api-example",
+    "jira-issues",
+    "jira"
+  ],
+  "author": "Daria Graf <daria.graf@posteo.net>",
+  "license": "MIT",
+  "homepage": "https://github.com/daria-graf/jira-api-access-example#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "prettier": "^2.7.1"
+  }
+}
