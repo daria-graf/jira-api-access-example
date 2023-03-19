@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "plugins": ["mocha"],
+  "extends": ["eslint:recommended", "plugin:mocha/recommended", "prettier"],
+  "rules": {
+    // consistent indentation style
+    "indent": ["warn", 2],
+    // semicolons at the end of statements
+    "semi": ["error", "always"],
+    // single quote
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    // enforces the use of === and !== in every situation
+    "eqeqeq": ["error", "always"],
+    // requires following curly brace conventions, e.g. if (foo) { foo++; }
+    "curly": "error",
+    // the opening brace of a block is placed on the same line as its corresponding statement
+    "brace-style": "error",
+    // requires at least one space before keywords
+    "keyword-spacing": ["error", { "before": true }],
+    // whitespace is not allowed between the function name or function keyword and the opening parenthesis
+    "space-before-function-paren": ["error", "never"],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "*", "next": "function" },
+      { "blankLine": "always", "prev": "function", "next": "*" }
+    ],
+    "mocha/no-skipped-tests": "error",
+    "mocha/no-exclusive-tests": "error",
+    "mocha/no-mocha-arrows": "off"
+  },
+  "parserOptions": {},
+  "env": {
+    "node": true,
+    "es2021": true
+  }
+}

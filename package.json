@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "An example application how to use Jira API",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "husky:prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/daria-graf/jira-api-access-example.git"
@@ -21,6 +24,17 @@
   },
   "devDependencies": {
     "eslint": "^8.36.0",
-    "prettier": "^2.7.1"
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
+  },
+  "lint-staged": {
+    "*.(js)": [
+      "eslint --fix"
+    ],
+    "src/**/*.(js|json)": [
+      "prettier --write"
+    ]
   }
 }
